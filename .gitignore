@@ -8,3 +8,4 @@ coverage/
 bench-results/
 .DS_Store
 Thumbs.db
+.claude/
