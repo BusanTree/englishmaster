@@ -1,0 +1,12 @@
+[
+  { "id": "today", "title": "오늘 하루", "topic": "how the learner's day has been", "opening": "Hi there! How has your day been so far?", "openingKo": "안녕하세요! 오늘 하루 어떻게 보내고 있어요?" },
+  { "id": "hobbies", "title": "취미", "topic": "hobbies and free time", "opening": "What do you like to do in your free time?", "openingKo": "시간 날 때 뭐 하는 걸 좋아해요?" },
+  { "id": "travel", "title": "여행", "topic": "travel experiences and dream trips", "opening": "Have you been anywhere fun recently, or is there a place you really want to visit?", "openingKo": "최근에 재미있는 곳에 다녀왔어요? 아니면 꼭 가 보고 싶은 곳이 있어요?" },
+  { "id": "food", "title": "음식", "topic": "food, cooking, and restaurants", "opening": "What's your favorite food? I'm always looking for something new to try.", "openingKo": "제일 좋아하는 음식이 뭐예요? 저는 늘 새로 먹어 볼 걸 찾고 있거든요." },
+  { "id": "movies", "title": "영화와 드라마", "topic": "movies, TV shows, and dramas", "opening": "Have you watched any good movies or shows lately?", "openingKo": "요즘 재미있게 본 영화나 드라마 있어요?" },
+  { "id": "work", "title": "일과 공부", "topic": "the learner's job or studies", "opening": "What do you do? Are you working or studying these days?", "openingKo": "무슨 일 하세요? 요즘 일하세요, 아니면 공부하세요?" },
+  { "id": "weekend", "title": "주말 계획", "topic": "weekend plans", "opening": "Do you have any plans for this weekend?", "openingKo": "이번 주말에 무슨 계획 있어요?" },
+  { "id": "goals", "title": "목표와 꿈", "topic": "personal goals and dreams", "opening": "What's one goal you're working on this year?", "openingKo": "올해 이루려고 노력 중인 목표 하나만 말해 줄래요?" },
+  { "id": "hometown", "title": "고향", "topic": "the learner's hometown and where they live now", "opening": "Where are you from? What's your hometown like?", "openingKo": "어디 출신이에요? 고향은 어떤 곳이에요?" },
+  { "id": "shopping", "title": "최근 산 물건", "topic": "something the learner bought recently", "opening": "What's the last thing you bought that made you really happy?", "openingKo": "최근에 사고 정말 기분 좋았던 물건이 뭐예요?" }
+]
