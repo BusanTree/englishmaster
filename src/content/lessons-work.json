@@ -1,1 +1,204 @@
-[]
+[
+  {
+    "id": "work-1",
+    "title": "첫 인사와 스몰토크",
+    "description": "동료와 가볍게 대화 나누기",
+    "expressions": [
+      { "en": "How's your week going?", "ko": "이번 주 어떻게 보내고 있어요?", "tip": "직장에서 가볍게 안부를 묻는 표현이에요." },
+      { "en": "It's been pretty hectic.", "ko": "꽤 정신없었어요." },
+      { "en": "Did you have a nice weekend?", "ko": "주말 잘 보냈어요?" },
+      { "en": "I'm in charge of marketing.", "ko": "저는 마케팅을 맡고 있어요.", "tip": "be in charge of ~는 ~을 담당한다는 뜻이에요." },
+      { "en": "Let me know if you need anything.", "ko": "필요한 거 있으면 말해요." },
+      { "en": "Let's grab lunch sometime.", "ko": "언제 점심 같이 먹어요." }
+    ],
+    "dialogue": {
+      "setting": "새로 온 동료와 사무실 탕비실에서 마주쳤어요.",
+      "aiRole": "새로 온 동료",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "Hi, I don't think we've met. I'm Sam. I just joined the sales team.", "ko": "안녕하세요, 처음 뵙는 것 같네요. 저는 샘이에요. 영업팀에 새로 왔어요." },
+        { "speaker": "user", "en": "Nice to meet you, Sam. I'm in charge of marketing.", "ko": "반가워요, 샘. 저는 마케팅을 맡고 있어요." },
+        { "speaker": "ai", "en": "Oh, great. We'll probably work together a lot.", "ko": "아, 잘됐네요. 같이 일할 일이 많겠어요." },
+        { "speaker": "user", "en": "I hope so. How's your week going?", "ko": "그러면 좋겠어요. 이번 주 어떻게 보내고 있어요?" },
+        { "speaker": "ai", "en": "It's been pretty hectic. There's so much to learn.", "ko": "꽤 정신없었어요. 배울 게 정말 많네요." },
+        { "speaker": "user", "en": "Let me know if you need anything.", "ko": "필요한 거 있으면 말해요." },
+        { "speaker": "ai", "en": "Thanks, that's really kind of you.", "ko": "고마워요, 정말 친절하시네요." },
+        { "speaker": "user", "en": "Let's grab lunch sometime.", "ko": "언제 점심 같이 먹어요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a new coworker who just joined the company",
+      "situation": "You meet the learner in the office kitchen. Make small talk about the week, the weekend, and each other's jobs, and keep it friendly and light.",
+      "opening": "Hi! I don't think we've met yet. I'm Sam from the sales team.",
+      "openingKo": "안녕하세요! 아직 인사를 못 나눈 것 같네요. 저는 영업팀 샘이에요."
+    }
+  },
+  {
+    "id": "work-2",
+    "title": "회의에서 의견 말하기",
+    "description": "의견을 내고, 반대하고, 제안하기",
+    "expressions": [
+      { "en": "In my opinion, we should focus on young customers.", "ko": "제 생각에는 젊은 고객에게 집중해야 해요." },
+      { "en": "I see your point, but I have a different idea.", "ko": "무슨 말인지는 알지만, 저는 생각이 좀 달라요.", "tip": "반대 의견을 부드럽게 꺼낼 때 써요." },
+      { "en": "Could you explain that a little more?", "ko": "그걸 조금 더 설명해 주시겠어요?" },
+      { "en": "That's a good point.", "ko": "좋은 지적이에요." },
+      { "en": "What if we try a different approach?", "ko": "다른 방법을 시도해 보면 어떨까요?", "tip": "What if ~?로 부담 없이 제안할 수 있어요." },
+      { "en": "Let's move on to the next item.", "ko": "다음 안건으로 넘어가죠." }
+    ],
+    "dialogue": {
+      "setting": "팀 회의에서 신제품 홍보 방법을 논의해요.",
+      "aiRole": "팀장",
+      "userRole": "팀원",
+      "lines": [
+        { "speaker": "ai", "en": "Okay, let's talk about the launch. Any ideas?", "ko": "자, 출시 얘기를 해 봅시다. 아이디어 있어요?" },
+        { "speaker": "user", "en": "In my opinion, we should focus on young customers.", "ko": "제 생각에는 젊은 고객에게 집중해야 해요." },
+        { "speaker": "ai", "en": "Hmm, our main customers are in their forties, though.", "ko": "음, 그런데 우리 주 고객은 사십 대예요." },
+        { "speaker": "user", "en": "I see your point, but I have a different idea.", "ko": "무슨 말인지는 알지만, 저는 생각이 좀 달라요." },
+        { "speaker": "ai", "en": "Okay, go ahead.", "ko": "좋아요, 말해 봐요." },
+        { "speaker": "user", "en": "What if we try a different approach? We could use social media.", "ko": "다른 방법을 시도해 보면 어떨까요? 소셜 미디어를 쓸 수 있어요." },
+        { "speaker": "ai", "en": "That's a good point. Let's look at the numbers next week.", "ko": "좋은 지적이네요. 다음 주에 수치를 봅시다." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a team leader running a meeting",
+      "situation": "You are discussing how to promote a new product. Ask for the learner's opinion, push back politely on some ideas, and ask follow-up questions.",
+      "opening": "Okay, everyone, let's get started. We need ideas for promoting our new product. What do you think?",
+      "openingKo": "자, 여러분, 시작합시다. 신제품 홍보 아이디어가 필요해요. 어떻게 생각해요?"
+    }
+  },
+  {
+    "id": "work-3",
+    "title": "일정 잡기",
+    "description": "미팅 시간 정하고 바꾸기",
+    "expressions": [
+      { "en": "Are you free on Thursday afternoon?", "ko": "목요일 오후에 시간 괜찮아요?" },
+      { "en": "Does three o'clock work for you?", "ko": "세 시 괜찮으세요?", "tip": "work for you는 상대에게 괜찮은지 묻는 표현이에요." },
+      { "en": "Something came up. Can we reschedule?", "ko": "일이 좀 생겼어요. 일정을 다시 잡을 수 있을까요?" },
+      { "en": "How about next Monday instead?", "ko": "대신 다음 주 월요일은 어때요?" },
+      { "en": "I'll send you a calendar invite.", "ko": "일정 초대를 보낼게요." },
+      { "en": "Let's keep it short, about thirty minutes.", "ko": "짧게 삼십 분 정도로 하죠." }
+    ],
+    "dialogue": {
+      "setting": "거래처 담당자와 미팅 일정을 잡아요.",
+      "aiRole": "거래처 담당자",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "Hi, I'd like to set up a meeting to discuss the contract.", "ko": "안녕하세요, 계약 건으로 미팅을 잡고 싶어요." },
+        { "speaker": "user", "en": "Sure. Are you free on Thursday afternoon?", "ko": "좋아요. 목요일 오후에 시간 괜찮아요?" },
+        { "speaker": "ai", "en": "Thursday is good. What time?", "ko": "목요일 좋아요. 몇 시요?" },
+        { "speaker": "user", "en": "Does three o'clock work for you?", "ko": "세 시 괜찮으세요?" },
+        { "speaker": "ai", "en": "Three works. How long will it take?", "ko": "세 시 괜찮아요. 얼마나 걸릴까요?" },
+        { "speaker": "user", "en": "Let's keep it short, about thirty minutes.", "ko": "짧게 삼십 분 정도로 하죠." },
+        { "speaker": "ai", "en": "Perfect. See you then.", "ko": "좋아요. 그때 봬요." },
+        { "speaker": "user", "en": "Great. I'll send you a calendar invite.", "ko": "좋아요. 일정 초대를 보낼게요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a client who wants to schedule a meeting",
+      "situation": "You need to set up a meeting with the learner. Suggest times, have one conflict that requires rescheduling, and agree on a final time.",
+      "opening": "Hi! I'd like to set up a meeting with you next week. When are you available?",
+      "openingKo": "안녕하세요! 다음 주에 미팅을 잡고 싶어요. 언제 시간 되세요?"
+    }
+  },
+  {
+    "id": "work-4",
+    "title": "전화와 화상회의",
+    "description": "연결 문제와 다시 말해 달라는 요청",
+    "expressions": [
+      { "en": "Can you hear me okay?", "ko": "제 목소리 잘 들려요?" },
+      { "en": "Sorry, you're breaking up.", "ko": "죄송해요, 소리가 끊겨요.", "tip": "통화나 화상회의에서 소리가 끊길 때 써요." },
+      { "en": "Could you say that again, please?", "ko": "다시 한번 말씀해 주시겠어요?" },
+      { "en": "I'll share my screen.", "ko": "제 화면을 공유할게요." },
+      { "en": "May I speak to Ms. Lee, please?", "ko": "이 선생님과 통화할 수 있을까요?" },
+      { "en": "Can I leave a message?", "ko": "메시지 남겨도 될까요?" }
+    ],
+    "dialogue": {
+      "setting": "화상회의를 시작했는데 연결이 불안정해요.",
+      "aiRole": "해외 지사 동료",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "Hi everyone. Can you hear me okay?", "ko": "안녕하세요, 여러분. 제 목소리 잘 들려요?" },
+        { "speaker": "user", "en": "Yes, but sorry, you're breaking up.", "ko": "네, 그런데 죄송해요, 소리가 끊겨요." },
+        { "speaker": "ai", "en": "Is this better? I moved closer to the router.", "ko": "이제 나아요? 공유기 가까이 왔어요." },
+        { "speaker": "user", "en": "Much better, thanks. Could you say that again, please?", "ko": "훨씬 나아요, 고마워요. 다시 한번 말씀해 주시겠어요?" },
+        { "speaker": "ai", "en": "Sure. I said we should review the sales report first.", "ko": "네. 매출 보고서부터 검토하자고 했어요." },
+        { "speaker": "user", "en": "Okay. I'll share my screen.", "ko": "알겠어요. 제 화면을 공유할게요." },
+        { "speaker": "ai", "en": "Great, I can see it now.", "ko": "좋아요, 이제 보여요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a coworker from an overseas office on a video call",
+      "situation": "You are on a video call with the learner. Have a small connection problem at first, then discuss a report together, and ask the learner to share their screen.",
+      "opening": "Hi! Can you hear me okay? My connection is a little slow today.",
+      "openingKo": "안녕하세요! 제 목소리 잘 들려요? 오늘 연결이 좀 느리네요."
+    }
+  },
+  {
+    "id": "work-5",
+    "title": "부탁하고 거절하기",
+    "description": "정중하게 부탁하고 부드럽게 거절하기",
+    "expressions": [
+      { "en": "Could you do me a favor?", "ko": "부탁 하나 들어줄 수 있어요?" },
+      { "en": "Would you mind checking this report?", "ko": "이 보고서 좀 확인해 주실 수 있을까요?", "tip": "Would you mind ~ing?는 아주 공손한 부탁이에요." },
+      { "en": "I'm afraid I can't today.", "ko": "죄송하지만 오늘은 안 될 것 같아요.", "tip": "I'm afraid는 거절을 부드럽게 해 줘요." },
+      { "en": "I'm swamped with work right now.", "ko": "지금 일이 너무 많아요." },
+      { "en": "Maybe I can help you tomorrow.", "ko": "내일은 도와줄 수 있을 것 같아요." },
+      { "en": "Thanks for understanding.", "ko": "이해해 줘서 고마워요." }
+    ],
+    "dialogue": {
+      "setting": "동료가 퇴근 직전에 일을 부탁해요.",
+      "aiRole": "동료",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "Hey, could you do me a favor?", "ko": "저기, 부탁 하나 들어줄 수 있어요?" },
+        { "speaker": "user", "en": "Sure, what is it?", "ko": "그럼요, 뭔데요?" },
+        { "speaker": "ai", "en": "Would you mind checking this report before tonight?", "ko": "오늘 밤 전에 이 보고서 좀 확인해 줄 수 있어요?" },
+        { "speaker": "user", "en": "I'm afraid I can't today. I'm swamped with work right now.", "ko": "죄송하지만 오늘은 안 될 것 같아요. 지금 일이 너무 많아요." },
+        { "speaker": "ai", "en": "Oh, I see. It's not urgent.", "ko": "아, 그렇군요. 급한 건 아니에요." },
+        { "speaker": "user", "en": "Maybe I can help you tomorrow morning.", "ko": "내일 아침엔 도와줄 수 있을 것 같아요." },
+        { "speaker": "ai", "en": "That would be great. Thanks!", "ko": "그럼 정말 좋죠. 고마워요!" },
+        { "speaker": "user", "en": "Thanks for understanding.", "ko": "이해해 줘서 고마워요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a coworker who often asks for help",
+      "situation": "Ask the learner for a few favors at work. Accept it gracefully when they say no, and work out a better time together.",
+      "opening": "Hey, sorry to bother you. Do you have a minute? I need a small favor.",
+      "openingKo": "저기, 바쁜데 미안해요. 잠깐 시간 있어요? 작은 부탁이 하나 있어서요."
+    }
+  },
+  {
+    "id": "work-6",
+    "title": "진행 상황 보고하기",
+    "description": "진행 상황과 문제를 알리기",
+    "expressions": [
+      { "en": "We're on track to finish by Friday.", "ko": "금요일까지 끝낼 수 있게 순조롭게 진행 중이에요.", "tip": "on track은 계획대로 진행되고 있다는 뜻이에요." },
+      { "en": "We're a little behind schedule.", "ko": "일정보다 조금 늦어지고 있어요." },
+      { "en": "We ran into a small problem.", "ko": "작은 문제가 생겼어요." },
+      { "en": "I'll keep you posted.", "ko": "진행 상황을 계속 알려 드릴게요.", "tip": "keep you posted는 소식을 계속 전한다는 뜻이에요." },
+      { "en": "The design is almost done.", "ko": "디자인은 거의 끝났어요." },
+      { "en": "We need one more week.", "ko": "일주일이 더 필요해요." }
+    ],
+    "dialogue": {
+      "setting": "매니저가 프로젝트 진행 상황을 물어봐요.",
+      "aiRole": "매니저",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "How is the website project going?", "ko": "웹사이트 프로젝트는 어떻게 돼 가요?" },
+        { "speaker": "user", "en": "The design is almost done.", "ko": "디자인은 거의 끝났어요." },
+        { "speaker": "ai", "en": "Good. Will we launch on time?", "ko": "좋아요. 제때 출시할 수 있을까요?" },
+        { "speaker": "user", "en": "Well, we're a little behind schedule. We ran into a small problem.", "ko": "음, 일정보다 조금 늦어지고 있어요. 작은 문제가 생겼거든요." },
+        { "speaker": "ai", "en": "What kind of problem?", "ko": "어떤 문제요?" },
+        { "speaker": "user", "en": "The payment system has a bug. We need one more week.", "ko": "결제 시스템에 버그가 있어요. 일주일이 더 필요해요." },
+        { "speaker": "ai", "en": "Okay. That's fine if the quality is good.", "ko": "알겠어요. 품질만 좋다면 괜찮아요." },
+        { "speaker": "user", "en": "Thank you. I'll keep you posted.", "ko": "감사합니다. 진행 상황을 계속 알려 드릴게요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "the learner's manager",
+      "situation": "Ask the learner for a progress update on their project. Ask about the schedule, any problems, and what they need from you.",
+      "opening": "Hi! Do you have a minute? I'd like a quick update on your project.",
+      "openingKo": "안녕하세요! 잠깐 시간 돼요? 프로젝트 진행 상황을 간단히 듣고 싶어요."
+    }
+  }
+]
