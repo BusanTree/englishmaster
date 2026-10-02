@@ -1,17 +1,10 @@
 import { Keyboard, Mic } from 'lucide-react'
 import { useState } from 'react'
-import { getRecognitionCtor, type RecognizerError } from '../speech/recognizer.ts'
+import { SPEECH_NOTICES } from '../speech/notices.ts'
+import { getRecognitionCtor } from '../speech/recognizer.ts'
 import { useSpeechRecognition } from '../speech/useSpeechRecognition.ts'
 import { Button } from './Button.tsx'
 import { MicButton } from './MicButton.tsx'
-
-const NOTICES: Record<RecognizerError, string> = {
-  'not-allowed': '마이크 권한을 허용해 주세요. 직접 입력으로도 할 수 있어요.',
-  unsupported: '이 브라우저는 음성인식을 지원하지 않아요. 크롬에서 열어 주세요.',
-  network: '음성인식에는 인터넷 연결이 필요해요.',
-  'no-speech': '잘 안 들렸어요. 다시 말해 볼까요?',
-  other: '음성인식에 문제가 생겼어요. 다시 시도하거나 직접 입력해 주세요.',
-}
 
 /**
  * Answer by voice (Chrome speech recognition) or by typing.
@@ -27,15 +20,15 @@ export function SpeakInput({
   placeholder?: string
 }) {
   const [mode, setMode] = useState<'voice' | 'keyboard'>(() => (getRecognitionCtor() ? 'voice' : 'keyboard'))
-  const [notice, setNotice] = useState<string | null>(() => (getRecognitionCtor() ? null : NOTICES.unsupported))
+  const [notice, setNotice] = useState<string | null>(() => (getRecognitionCtor() ? null : SPEECH_NOTICES.unsupported))
   const [text, setText] = useState('')
   const rec = useSpeechRecognition({
     onFinal: onResult,
     onError: (error) => {
-      setNotice(NOTICES[error])
+      setNotice(SPEECH_NOTICES[error])
       if (error === 'not-allowed' || error === 'unsupported') setMode('keyboard')
     },
-    onSilence: () => setNotice(NOTICES['no-speech']),
+    onSilence: () => setNotice(SPEECH_NOTICES['no-speech']),
   })
 
   const listening = rec.status === 'listening'
