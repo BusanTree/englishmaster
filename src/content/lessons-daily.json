@@ -1,1 +1,203 @@
-[]
+[
+  {
+    "id": "daily-1",
+    "title": "자기소개하기",
+    "description": "이름, 사는 곳, 하는 일 말하기",
+    "expressions": [
+      { "en": "Nice to meet you.", "ko": "만나서 반가워요.", "tip": "처음 만난 사람에게 하는 인사예요. 대답은 Nice to meet you, too." },
+      { "en": "Please call me Minji.", "ko": "민지라고 불러 주세요.", "tip": "외국인이 부르기 쉬운 이름을 알려 줄 때 써요." },
+      { "en": "I'm from Seoul, Korea.", "ko": "저는 한국 서울에서 왔어요." },
+      { "en": "I work at a design company.", "ko": "저는 디자인 회사에서 일해요.", "tip": "직업은 I work at ~ 또는 I'm a ~로 말해요." },
+      { "en": "In my free time, I like to watch movies.", "ko": "시간이 날 때는 영화 보는 걸 좋아해요." },
+      { "en": "What about you?", "ko": "당신은요?", "tip": "받은 질문을 되돌려 대화를 이어 가는 만능 표현이에요." }
+    ],
+    "dialogue": {
+      "setting": "어학원 첫 수업에서 옆자리 사람과 인사해요.",
+      "aiRole": "같은 반 친구",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "Hi! I'm Alex. I'm new here.", "ko": "안녕하세요! 저는 알렉스예요. 여기 처음 왔어요." },
+        { "speaker": "user", "en": "Hi, Alex. Nice to meet you.", "ko": "안녕하세요, 알렉스. 만나서 반가워요." },
+        { "speaker": "ai", "en": "Nice to meet you, too. Where are you from?", "ko": "저도 반가워요. 어디서 왔어요?" },
+        { "speaker": "user", "en": "I'm from Seoul, Korea. What about you?", "ko": "저는 한국 서울에서 왔어요. 당신은요?" },
+        { "speaker": "ai", "en": "I'm from Canada. What do you do?", "ko": "저는 캐나다에서 왔어요. 무슨 일 하세요?" },
+        { "speaker": "user", "en": "I work at a design company.", "ko": "저는 디자인 회사에서 일해요." },
+        { "speaker": "ai", "en": "Cool! What do you like to do for fun?", "ko": "멋지네요! 재미로 뭐 하는 걸 좋아해요?" },
+        { "speaker": "user", "en": "In my free time, I like to watch movies.", "ko": "시간이 날 때는 영화 보는 걸 좋아해요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a friendly classmate at an English academy",
+      "situation": "You are meeting the learner for the first time on the first day of class. Ask about their name, where they live, their job, and their hobbies, and share a little about yourself.",
+      "opening": "Hi there! I'm Alex. Is this your first class here too?",
+      "openingKo": "안녕하세요! 저는 알렉스예요. 당신도 여기 첫 수업이에요?"
+    }
+  },
+  {
+    "id": "daily-2",
+    "title": "안부와 근황",
+    "description": "오랜만에 만난 친구와 근황 나누기",
+    "expressions": [
+      { "en": "Long time no see!", "ko": "오랜만이에요!", "tip": "오랜만에 만난 사람에게 반갑게 하는 말이에요." },
+      { "en": "How have you been?", "ko": "그동안 어떻게 지냈어요?", "tip": "오랜만에 만났을 때는 How are you?보다 자연스러워요." },
+      { "en": "I've been really busy with work.", "ko": "일 때문에 정말 바빴어요." },
+      { "en": "Not much. Same as usual.", "ko": "별일 없어요. 늘 똑같죠.", "tip": "What's new? 같은 질문에 하는 대답이에요." },
+      { "en": "I just started a new job.", "ko": "얼마 전에 새 일을 시작했어요." },
+      { "en": "Let's catch up over coffee sometime.", "ko": "언제 커피 마시면서 밀린 얘기 해요.", "tip": "catch up은 밀린 이야기를 나눈다는 뜻이에요." }
+    ],
+    "dialogue": {
+      "setting": "길에서 오랜만에 친구를 우연히 만났어요.",
+      "aiRole": "옛 친구",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "Oh my gosh, is that you? Long time no see!", "ko": "어머, 너야? 진짜 오랜만이다!" },
+        { "speaker": "user", "en": "Long time no see! How have you been?", "ko": "정말 오랜만이야! 그동안 어떻게 지냈어?" },
+        { "speaker": "ai", "en": "Pretty good. I moved to a new apartment. How about you?", "ko": "꽤 잘 지냈어. 새 아파트로 이사했어. 너는?" },
+        { "speaker": "user", "en": "I've been really busy with work. I just started a new job.", "ko": "일 때문에 정말 바빴어. 얼마 전에 새 일을 시작했거든." },
+        { "speaker": "ai", "en": "Wow, congratulations! Do you like it so far?", "ko": "와, 축하해! 지금까지는 마음에 들어?" },
+        { "speaker": "user", "en": "Yes, I like it a lot. Let's catch up over coffee sometime.", "ko": "응, 정말 좋아. 언제 커피 마시면서 밀린 얘기 하자." },
+        { "speaker": "ai", "en": "I'd love that. I'll text you this week.", "ko": "좋지. 이번 주에 문자할게." }
+      ]
+    },
+    "aiScenario": {
+      "role": "an old friend the learner hasn't seen for a long time",
+      "situation": "You run into the learner on the street after a long time. Catch up on work, home, and recent news, and suggest meeting again.",
+      "opening": "No way, is that you? Long time no see! How have you been?",
+      "openingKo": "말도 안 돼, 너야? 진짜 오랜만이다! 그동안 어떻게 지냈어?"
+    }
+  },
+  {
+    "id": "daily-3",
+    "title": "취미 이야기",
+    "description": "좋아하는 것과 여가 생활 말하기",
+    "expressions": [
+      { "en": "What do you do in your free time?", "ko": "시간 날 때 뭐 해요?", "tip": "취미를 물을 때 What's your hobby?보다 자연스러워요." },
+      { "en": "I'm really into hiking these days.", "ko": "요즘 등산에 푹 빠졌어요.", "tip": "be into ~는 ~에 빠져 있다는 뜻이에요." },
+      { "en": "I go to the gym three times a week.", "ko": "일주일에 세 번 헬스장에 가요." },
+      { "en": "I've been learning to play the guitar.", "ko": "기타 치는 걸 배우고 있어요." },
+      { "en": "It helps me relieve stress.", "ko": "스트레스를 푸는 데 도움이 돼요." },
+      { "en": "You should try it sometime.", "ko": "언제 한번 해 봐요." }
+    ],
+    "dialogue": {
+      "setting": "회사 동료와 점심을 먹으며 취미 이야기를 해요.",
+      "aiRole": "회사 동료",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "So, what do you do in your free time?", "ko": "그래서, 시간 날 때 뭐 해요?" },
+        { "speaker": "user", "en": "I'm really into hiking these days.", "ko": "요즘 등산에 푹 빠졌어요." },
+        { "speaker": "ai", "en": "Nice! How often do you go?", "ko": "좋네요! 얼마나 자주 가요?" },
+        { "speaker": "user", "en": "Almost every weekend. It helps me relieve stress.", "ko": "거의 주말마다요. 스트레스를 푸는 데 도움이 돼요." },
+        { "speaker": "ai", "en": "I've always wanted to try hiking, but I'm not very fit.", "ko": "저도 등산 늘 해 보고 싶었는데, 체력이 별로 안 좋아서요." },
+        { "speaker": "user", "en": "There are some easy trails, too. You should try it sometime.", "ko": "쉬운 코스도 있어요. 언제 한번 해 봐요." },
+        { "speaker": "ai", "en": "Maybe I'll join you next time!", "ko": "다음에 같이 가도 되겠네요!" }
+      ]
+    },
+    "aiScenario": {
+      "role": "a coworker having lunch with the learner",
+      "situation": "You chat about hobbies and free time. Ask what the learner enjoys, how often they do it, and why they like it. Share one hobby of your own.",
+      "opening": "So, do you have any plans after work today? What do you usually do in your free time?",
+      "openingKo": "오늘 퇴근하고 계획 있어요? 시간 날 때 보통 뭐 해요?"
+    }
+  },
+  {
+    "id": "daily-4",
+    "title": "주말 계획",
+    "description": "주말 계획을 묻고 약속 잡기",
+    "expressions": [
+      { "en": "Do you have any plans this weekend?", "ko": "이번 주말에 무슨 계획 있어요?" },
+      { "en": "I'm thinking of going to the beach.", "ko": "바다에 갈까 생각 중이에요.", "tip": "I'm thinking of ~ing는 아직 확정하지 않은 계획에 써요." },
+      { "en": "Nothing special. I'll just stay home.", "ko": "특별한 건 없어요. 그냥 집에 있을 거예요." },
+      { "en": "Do you want to come with me?", "ko": "저랑 같이 갈래요?" },
+      { "en": "That sounds great!", "ko": "좋아요!", "tip": "제안을 반갑게 받아들일 때 써요." },
+      { "en": "What time should we meet?", "ko": "몇 시에 만날까요?" }
+    ],
+    "dialogue": {
+      "setting": "금요일 퇴근길에 친구와 주말 계획을 이야기해요.",
+      "aiRole": "친구",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "Finally, it's Friday! Do you have any plans this weekend?", "ko": "드디어 금요일이다! 이번 주말에 무슨 계획 있어?" },
+        { "speaker": "user", "en": "I'm thinking of going to the beach. Do you want to come with me?", "ko": "바다에 갈까 생각 중이야. 나랑 같이 갈래?" },
+        { "speaker": "ai", "en": "That sounds fun! Saturday or Sunday?", "ko": "재밌겠다! 토요일이야, 일요일이야?" },
+        { "speaker": "user", "en": "Saturday would be better for me.", "ko": "나는 토요일이 더 좋아." },
+        { "speaker": "ai", "en": "Okay, Saturday works for me too.", "ko": "좋아, 나도 토요일 괜찮아." },
+        { "speaker": "user", "en": "Great! What time should we meet?", "ko": "좋아! 몇 시에 만날까?" },
+        { "speaker": "ai", "en": "How about nine in the morning at the station?", "ko": "아침 아홉 시에 역에서 어때?" },
+        { "speaker": "user", "en": "That sounds great! See you then.", "ko": "좋아! 그때 보자." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a close friend",
+      "situation": "It's Friday evening. Ask about the learner's weekend plans, suggest doing something together, and agree on a day, time, and place.",
+      "opening": "Finally, it's Friday! Do you have anything fun planned for the weekend?",
+      "openingKo": "드디어 금요일이다! 주말에 재밌는 계획 있어?"
+    }
+  },
+  {
+    "id": "daily-5",
+    "title": "음식과 취향",
+    "description": "좋아하는 음식과 입맛 이야기하기",
+    "expressions": [
+      { "en": "What kind of food do you like?", "ko": "어떤 음식 좋아해요?" },
+      { "en": "I love spicy food.", "ko": "저는 매운 음식을 정말 좋아해요." },
+      { "en": "I'm not a big fan of sweets.", "ko": "단 건 별로 안 좋아해요.", "tip": "I'm not a big fan of ~는 싫다는 말을 부드럽게 하는 표현이에요." },
+      { "en": "I can't eat seafood. I'm allergic.", "ko": "해산물은 못 먹어요. 알레르기가 있거든요." },
+      { "en": "This place is famous for its noodles.", "ko": "여기는 국수로 유명해요." },
+      { "en": "You have to try this!", "ko": "이거 꼭 먹어 봐야 해요!" }
+    ],
+    "dialogue": {
+      "setting": "외국인 친구와 저녁 먹을 식당을 고르고 있어요.",
+      "aiRole": "외국인 친구",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "I'm starving. What kind of food do you like?", "ko": "배고파 죽겠어요. 어떤 음식 좋아해요?" },
+        { "speaker": "user", "en": "I love spicy food. How about you?", "ko": "저는 매운 음식을 정말 좋아해요. 당신은요?" },
+        { "speaker": "ai", "en": "Spicy is okay, but I can't eat seafood. I'm allergic.", "ko": "매운 건 괜찮은데, 해산물은 못 먹어요. 알레르기가 있거든요." },
+        { "speaker": "user", "en": "No problem. This place is famous for its noodles.", "ko": "괜찮아요. 여기는 국수로 유명해요." },
+        { "speaker": "ai", "en": "Great. Do they have anything sweet for dessert?", "ko": "좋아요. 디저트로 단 것도 있어요?" },
+        { "speaker": "user", "en": "Maybe, but I'm not a big fan of sweets.", "ko": "아마도요, 근데 저는 단 건 별로 안 좋아해요." },
+        { "speaker": "ai", "en": "Ha ha, more for me then!", "ko": "하하, 그럼 제가 다 먹을게요!" }
+      ]
+    },
+    "aiScenario": {
+      "role": "a friend from abroad who is visiting Korea",
+      "situation": "You are choosing a place for dinner together. Talk about favorite foods and things you can't eat, then decide what to eat.",
+      "opening": "I'm so hungry! What kind of food do you feel like tonight?",
+      "openingKo": "너무 배고파요! 오늘 밤엔 어떤 음식이 당겨요?"
+    }
+  },
+  {
+    "id": "daily-6",
+    "title": "길 묻고 답하기",
+    "description": "길을 묻고 설명을 알아듣기",
+    "expressions": [
+      { "en": "Excuse me, how do I get to the subway station?", "ko": "실례지만, 지하철역에 어떻게 가요?", "tip": "모르는 사람에게 말을 걸 때는 Excuse me로 시작해요." },
+      { "en": "Is it within walking distance?", "ko": "걸어갈 수 있는 거리예요?" },
+      { "en": "Go straight and turn left at the corner.", "ko": "쭉 가다가 모퉁이에서 왼쪽으로 도세요." },
+      { "en": "It's next to the bank.", "ko": "은행 옆에 있어요." },
+      { "en": "How long does it take on foot?", "ko": "걸어서 얼마나 걸려요?" },
+      { "en": "Thank you so much for your help.", "ko": "도와주셔서 정말 감사해요." }
+    ],
+    "dialogue": {
+      "setting": "처음 온 동네에서 지나가는 사람에게 길을 물어요.",
+      "aiRole": "지나가는 사람",
+      "userRole": "나",
+      "lines": [
+        { "speaker": "ai", "en": "Hi there. You look a little lost. Can I help you?", "ko": "안녕하세요. 길을 잃으신 것 같네요. 도와드릴까요?" },
+        { "speaker": "user", "en": "Yes, please. Excuse me, how do I get to the subway station?", "ko": "네, 부탁해요. 실례지만, 지하철역에 어떻게 가요?" },
+        { "speaker": "ai", "en": "Go straight and turn left at the corner. It's next to the bank.", "ko": "쭉 가다가 모퉁이에서 왼쪽으로 도세요. 은행 옆에 있어요." },
+        { "speaker": "user", "en": "Is it within walking distance?", "ko": "걸어갈 수 있는 거리예요?" },
+        { "speaker": "ai", "en": "Yes, it's pretty close.", "ko": "네, 꽤 가까워요." },
+        { "speaker": "user", "en": "How long does it take on foot?", "ko": "걸어서 얼마나 걸려요?" },
+        { "speaker": "ai", "en": "About five minutes.", "ko": "오 분 정도요." },
+        { "speaker": "user", "en": "Thank you so much for your help.", "ko": "도와주셔서 정말 감사해요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a friendly local person on the street",
+      "situation": "The learner is lost and asks you for directions to a place nearby. Give simple directions with landmarks and answer follow-up questions.",
+      "opening": "Hi! You look a little lost. Are you looking for something?",
+      "openingKo": "안녕하세요! 길을 잃으신 것 같네요. 뭐 찾으세요?"
+    }
+  }
+]

@@ -1,1 +1,204 @@
-[]
+[
+  {
+    "id": "travel-1",
+    "title": "공항과 기내",
+    "description": "탑승 수속, 게이트, 기내에서 쓰는 말",
+    "expressions": [
+      { "en": "I'd like an aisle seat, please.", "ko": "통로 쪽 좌석으로 주세요.", "tip": "창가 자리는 a window seat이에요." },
+      { "en": "Can I take this bag on the plane?", "ko": "이 가방 기내에 가지고 타도 돼요?" },
+      { "en": "Which gate do I need to go to?", "ko": "몇 번 게이트로 가야 해요?" },
+      { "en": "Could I get a blanket, please?", "ko": "담요 하나 주시겠어요?" },
+      { "en": "Chicken, please.", "ko": "치킨으로 주세요.", "tip": "기내식을 고를 때는 메뉴 이름에 please만 붙여도 충분해요." },
+      { "en": "I'm here on vacation.", "ko": "휴가차 왔어요.", "tip": "입국 심사에서 방문 목적을 물을 때 써요." }
+    ],
+    "dialogue": {
+      "setting": "공항 체크인 카운터에서 탑승 수속을 해요.",
+      "aiRole": "항공사 직원",
+      "userRole": "승객",
+      "lines": [
+        { "speaker": "ai", "en": "Good morning. May I see your passport, please?", "ko": "안녕하세요. 여권 좀 보여 주시겠어요?" },
+        { "speaker": "user", "en": "Here you go.", "ko": "여기 있어요." },
+        { "speaker": "ai", "en": "Thank you. Would you like a window or an aisle seat?", "ko": "감사합니다. 창가와 통로 자리 중 어디로 드릴까요?" },
+        { "speaker": "user", "en": "I'd like an aisle seat, please.", "ko": "통로 쪽 좌석으로 주세요." },
+        { "speaker": "ai", "en": "Sure. Do you have any bags to check?", "ko": "네. 부치실 짐 있으세요?" },
+        { "speaker": "user", "en": "Just one. Can I take this bag on the plane?", "ko": "하나요. 이 가방은 기내에 가지고 타도 돼요?" },
+        { "speaker": "ai", "en": "Yes, that's fine. Here's your boarding pass.", "ko": "네, 괜찮습니다. 탑승권 여기 있습니다." },
+        { "speaker": "user", "en": "Thank you. Which gate do I need to go to?", "ko": "감사합니다. 몇 번 게이트로 가야 해요?" }
+      ]
+    },
+    "aiScenario": {
+      "role": "an airline check-in agent at the airport",
+      "situation": "Check the learner in for an international flight: ask for the passport, seat preference, and checked bags, then give gate and boarding information.",
+      "opening": "Good morning! Where are you flying to today?",
+      "openingKo": "안녕하세요! 오늘 어디로 가세요?"
+    }
+  },
+  {
+    "id": "travel-2",
+    "title": "호텔 체크인",
+    "description": "예약 확인부터 요청 사항까지",
+    "expressions": [
+      { "en": "I'd like to check in, please.", "ko": "체크인하려고요.", "tip": "I'd like to는 I want to보다 공손해요." },
+      { "en": "I have a reservation under Kim.", "ko": "김이라는 이름으로 예약했어요." },
+      { "en": "What time is breakfast?", "ko": "조식은 몇 시예요?" },
+      { "en": "Could I get a late checkout?", "ko": "늦게 체크아웃할 수 있을까요?" },
+      { "en": "What's the Wi-Fi password?", "ko": "와이파이 비밀번호가 뭐예요?" },
+      { "en": "Could you send up some extra towels?", "ko": "방으로 수건 좀 더 갖다주시겠어요?" }
+    ],
+    "dialogue": {
+      "setting": "호텔 프런트에서 체크인을 해요.",
+      "aiRole": "프런트 직원",
+      "userRole": "투숙객",
+      "lines": [
+        { "speaker": "ai", "en": "Good evening! Welcome to the Grand Hotel. How can I help you?", "ko": "안녕하세요! 그랜드 호텔에 오신 걸 환영합니다. 무엇을 도와드릴까요?" },
+        { "speaker": "user", "en": "Hi, I'd like to check in, please.", "ko": "안녕하세요, 체크인하려고요." },
+        { "speaker": "ai", "en": "Sure. Do you have a reservation?", "ko": "네. 예약하셨나요?" },
+        { "speaker": "user", "en": "Yes, I have a reservation under Kim.", "ko": "네, 김이라는 이름으로 예약했어요." },
+        { "speaker": "ai", "en": "Here it is. Two nights in a double room.", "ko": "여기 있네요. 더블룸에 이틀 밤이시네요." },
+        { "speaker": "user", "en": "That's right. What time is breakfast?", "ko": "맞아요. 조식은 몇 시예요?" },
+        { "speaker": "ai", "en": "From seven to ten on the second floor.", "ko": "이 층에서 일곱 시부터 열 시까지입니다." },
+        { "speaker": "user", "en": "Great. Could I get a late checkout?", "ko": "좋네요. 늦게 체크아웃할 수 있을까요?" }
+      ]
+    },
+    "aiScenario": {
+      "role": "a friendly front desk clerk at a hotel",
+      "situation": "The learner is checking in. Ask for the reservation name, confirm the stay, and handle one simple request such as a late checkout or extra towels.",
+      "opening": "Good evening! Welcome to the Grand Hotel. Do you have a reservation with us?",
+      "openingKo": "안녕하세요! 그랜드 호텔에 오신 걸 환영합니다. 예약하셨나요?"
+    }
+  },
+  {
+    "id": "travel-3",
+    "title": "식당에서 주문하기",
+    "description": "자리 안내부터 계산까지",
+    "expressions": [
+      { "en": "A table for two, please.", "ko": "두 명이요.", "tip": "식당에 들어가면 인원수부터 말해요." },
+      { "en": "Could we see the menu, please?", "ko": "메뉴 좀 볼 수 있을까요?" },
+      { "en": "What do you recommend?", "ko": "뭐가 맛있어요?", "tip": "직원에게 추천 메뉴를 물을 때 써요." },
+      { "en": "I'll have the steak, medium, please.", "ko": "스테이크로 할게요, 미디엄으로요." },
+      { "en": "Could I get some more water?", "ko": "물 좀 더 주시겠어요?" },
+      { "en": "Can we have the check, please?", "ko": "계산서 좀 주시겠어요?", "tip": "미국에서는 check, 영국에서는 bill이라고 해요." }
+    ],
+    "dialogue": {
+      "setting": "레스토랑에서 저녁을 주문해요.",
+      "aiRole": "웨이터",
+      "userRole": "손님",
+      "lines": [
+        { "speaker": "ai", "en": "Good evening. How many people?", "ko": "안녕하세요. 몇 분이세요?" },
+        { "speaker": "user", "en": "A table for two, please.", "ko": "두 명이요." },
+        { "speaker": "ai", "en": "Right this way. Here's your table.", "ko": "이쪽으로 오세요. 여기 자리입니다." },
+        { "speaker": "user", "en": "Thank you. What do you recommend?", "ko": "감사합니다. 뭐가 맛있어요?" },
+        { "speaker": "ai", "en": "Our steak is very popular tonight.", "ko": "오늘은 스테이크가 아주 인기 있어요." },
+        { "speaker": "user", "en": "Then I'll have the steak, medium, please.", "ko": "그럼 스테이크로 할게요, 미디엄으로요." },
+        { "speaker": "ai", "en": "Excellent choice. Anything to drink?", "ko": "탁월한 선택이세요. 음료는요?" },
+        { "speaker": "user", "en": "Just water, please.", "ko": "물이면 돼요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a waiter at a casual restaurant",
+      "situation": "Seat the learner, take their order, answer questions about the menu, and bring the check at the end.",
+      "opening": "Good evening and welcome! How many people are in your party?",
+      "openingKo": "안녕하세요, 어서 오세요! 일행이 몇 분이세요?"
+    }
+  },
+  {
+    "id": "travel-4",
+    "title": "교통수단 이용하기",
+    "description": "택시, 지하철, 버스 이용하기",
+    "expressions": [
+      { "en": "Could you take me to this address?", "ko": "이 주소로 가 주시겠어요?" },
+      { "en": "How much is the fare to downtown?", "ko": "시내까지 요금이 얼마예요?" },
+      { "en": "Does this bus go to the museum?", "ko": "이 버스 박물관에 가요?" },
+      { "en": "Where should I get off?", "ko": "어디서 내려야 해요?" },
+      { "en": "Where can I buy a ticket?", "ko": "표는 어디서 사요?" },
+      { "en": "Please stop here.", "ko": "여기서 세워 주세요.", "tip": "택시에서 내리고 싶은 곳에서 말해요." }
+    ],
+    "dialogue": {
+      "setting": "택시를 타고 호텔로 가요.",
+      "aiRole": "택시 기사",
+      "userRole": "승객",
+      "lines": [
+        { "speaker": "ai", "en": "Hi! Where are you going?", "ko": "안녕하세요! 어디로 가세요?" },
+        { "speaker": "user", "en": "Could you take me to this address?", "ko": "이 주소로 가 주시겠어요?" },
+        { "speaker": "ai", "en": "Sure. That's the Grand Hotel, right?", "ko": "네. 그랜드 호텔 맞죠?" },
+        { "speaker": "user", "en": "Yes. How long will it take?", "ko": "네. 얼마나 걸려요?" },
+        { "speaker": "ai", "en": "About twenty minutes if there's no traffic.", "ko": "차가 안 막히면 이십 분 정도요." },
+        { "speaker": "user", "en": "Okay. Can I pay by card?", "ko": "알겠어요. 카드로 계산해도 돼요?" },
+        { "speaker": "ai", "en": "Of course. Here we are.", "ko": "물론이죠. 다 왔습니다." },
+        { "speaker": "user", "en": "Please stop here. Thank you!", "ko": "여기서 세워 주세요. 감사합니다!" }
+      ]
+    },
+    "aiScenario": {
+      "role": "a taxi driver in a big city",
+      "situation": "The learner gets in your taxi. Ask where they are going, chat a little about the city and the traffic, and handle payment when you arrive.",
+      "opening": "Hi there! Where can I take you today?",
+      "openingKo": "안녕하세요! 오늘 어디로 모실까요?"
+    }
+  },
+  {
+    "id": "travel-5",
+    "title": "쇼핑과 환불",
+    "description": "사이즈 묻기, 입어 보기, 반품하기",
+    "expressions": [
+      { "en": "I'm just looking, thanks.", "ko": "그냥 둘러보는 중이에요, 감사해요.", "tip": "점원이 도와줄까 물을 때 부담 없이 거절하는 말이에요." },
+      { "en": "Do you have this in a medium?", "ko": "이거 미디엄 사이즈 있어요?" },
+      { "en": "Can I try this on?", "ko": "이거 입어 봐도 돼요?" },
+      { "en": "It's a little too tight.", "ko": "조금 너무 껴요." },
+      { "en": "I'd like to return this, please.", "ko": "이거 반품하고 싶어요." },
+      { "en": "Here's my receipt.", "ko": "영수증 여기 있어요." }
+    ],
+    "dialogue": {
+      "setting": "옷 가게에서 산 셔츠를 바꾸러 왔어요.",
+      "aiRole": "점원",
+      "userRole": "손님",
+      "lines": [
+        { "speaker": "ai", "en": "Hi there! Can I help you find anything?", "ko": "안녕하세요! 찾으시는 거 도와드릴까요?" },
+        { "speaker": "user", "en": "Yes. I bought this shirt yesterday, but it's a little too tight.", "ko": "네. 어제 이 셔츠를 샀는데 조금 너무 껴요." },
+        { "speaker": "ai", "en": "I'm sorry to hear that. Would you like a bigger size?", "ko": "저런. 더 큰 사이즈로 드릴까요?" },
+        { "speaker": "user", "en": "Do you have this in a medium?", "ko": "이거 미디엄 사이즈 있어요?" },
+        { "speaker": "ai", "en": "Let me check. Sorry, we're out of mediums.", "ko": "확인해 볼게요. 죄송하지만 미디엄은 다 팔렸어요." },
+        { "speaker": "user", "en": "Then I'd like to return this, please. Here's my receipt.", "ko": "그럼 이거 반품하고 싶어요. 영수증 여기 있어요." },
+        { "speaker": "ai", "en": "No problem. I'll refund it to your card.", "ko": "알겠습니다. 카드로 환불해 드릴게요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a sales clerk at a clothing store",
+      "situation": "Help the learner find the right size, let them try things on, and handle an exchange or a refund politely.",
+      "opening": "Hi there! Welcome in. Are you looking for anything special today?",
+      "openingKo": "안녕하세요! 어서 오세요. 오늘 특별히 찾는 거 있으세요?"
+    }
+  },
+  {
+    "id": "travel-6",
+    "title": "곤란한 상황 해결하기",
+    "description": "물건을 잃어버리거나 아플 때 도움 청하기",
+    "expressions": [
+      { "en": "I lost my wallet.", "ko": "지갑을 잃어버렸어요." },
+      { "en": "I think I left it on the bus.", "ko": "버스에 두고 내린 것 같아요." },
+      { "en": "Could you help me, please?", "ko": "좀 도와주시겠어요?" },
+      { "en": "I don't feel well.", "ko": "몸이 안 좋아요." },
+      { "en": "Is there a pharmacy nearby?", "ko": "근처에 약국 있어요?" },
+      { "en": "Where is the nearest police station?", "ko": "가장 가까운 경찰서가 어디예요?" }
+    ],
+    "dialogue": {
+      "setting": "여행 중 지갑을 잃어버려 호텔 직원에게 도움을 청해요.",
+      "aiRole": "호텔 직원",
+      "userRole": "투숙객",
+      "lines": [
+        { "speaker": "ai", "en": "Hello. You look worried. Is everything okay?", "ko": "안녕하세요. 걱정이 있어 보이시네요. 괜찮으세요?" },
+        { "speaker": "user", "en": "Not really. I lost my wallet.", "ko": "아니요. 지갑을 잃어버렸어요." },
+        { "speaker": "ai", "en": "Oh no. Do you remember where you last had it?", "ko": "저런. 마지막으로 어디서 가지고 계셨는지 기억나세요?" },
+        { "speaker": "user", "en": "I think I left it on the bus.", "ko": "버스에 두고 내린 것 같아요." },
+        { "speaker": "ai", "en": "I can call the bus company for you.", "ko": "제가 버스 회사에 전화해 드릴게요." },
+        { "speaker": "user", "en": "Thank you. Where is the nearest police station?", "ko": "감사해요. 가장 가까운 경찰서가 어디예요?" },
+        { "speaker": "ai", "en": "It's just two blocks away. I'll draw you a map.", "ko": "두 블록만 가면 있어요. 지도를 그려 드릴게요." }
+      ]
+    },
+    "aiScenario": {
+      "role": "a helpful hotel staff member",
+      "situation": "The learner has a problem during their trip, such as a lost item or feeling sick. Ask questions, show concern, and suggest practical next steps.",
+      "opening": "Hello. You look a little worried. Is everything okay?",
+      "openingKo": "안녕하세요. 조금 걱정이 있어 보이시네요. 괜찮으세요?"
+    }
+  }
+]
