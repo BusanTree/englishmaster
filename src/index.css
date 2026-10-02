@@ -2,6 +2,98 @@
 
 @theme {
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  /* English the learner reads and speaks: rounded, friendly, clearly not UI chrome */
+  --font-en: "Nunito", "Pretendard Variable", Pretendard, system-ui, sans-serif;
+
+  --color-ink: #1a1530;
+  --color-muted: #6e6a80;
+  --color-faint: #a7a4b6;
+  --color-line: #e8e6f0;
+  --color-surface: #f6f5fb;
+
+  --color-brand: #6b4eff;
+  --color-brand-deep: #4b30d9;
+  --color-brand-soft: #efebff;
+
+  --color-good: #17b26a;
+  --color-good-deep: #0e8a50;
+  --color-good-soft: #e5f8ee;
+
+  --color-bad: #f04461;
+  --color-bad-deep: #c22a45;
+  --color-bad-soft: #fdecef;
+
+  --color-flame: #ff8a1f;
+  --color-flame-deep: #d9670a;
+  --color-flame-soft: #fff1e3;
+
+  --color-note: #9a6a00;
+  --color-note-soft: #fff6dc;
+
+  --animate-sheet-up: sheet-up 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --animate-pop: pop 260ms ease-out;
+  --animate-shake: shake 380ms ease-in-out;
+  --animate-pulse-ring: pulse-ring 1.4s ease-out infinite;
+  --animate-dot: dot 1s ease-in-out infinite;
+
+  @keyframes sheet-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.94);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.03);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20%,
+    60% {
+      transform: translateX(-6px);
+    }
+    40%,
+    80% {
+      transform: translateX(6px);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(1);
+      opacity: 0.45;
+    }
+    100% {
+      transform: scale(1.7);
+      opacity: 0;
+    }
+  }
+
+  @keyframes dot {
+    0%,
+    100% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
 }
 
 html,
@@ -13,6 +105,29 @@ body,
 body {
   margin: 0;
   background: #fff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior-y: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-brand) 55%, transparent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
 }

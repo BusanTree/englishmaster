@@ -1,40 +1,52 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Recognizer, type RecognizerError, type RecognizerStatus } from './recognizer.ts'
+import { getRecognitionCtor, Recognizer, type RecognizerError, type RecognizerStatus } from './recognizer.ts'
 import { stopSpeaking } from './tts.ts'
+
+export interface SpeechHandlers {
+  onFinal: (alternatives: string[]) => void
+  onError?: (error: RecognizerError) => void
+  onSilence?: () => void
+}
 
 export interface SpeechRecognitionState {
   supported: boolean
   status: RecognizerStatus
   interim: string
-  error: RecognizerError | null
   start: () => void
   stop: () => void
 }
 
-export function useSpeechRecognition(onFinal: (alternatives: string[]) => void): SpeechRecognitionState {
+export function useSpeechRecognition(handlers: SpeechHandlers): SpeechRecognitionState {
   const [status, setStatus] = useState<RecognizerStatus>('idle')
   const [interim, setInterim] = useState('')
-  const [error, setError] = useState<RecognizerError | null>(null)
-  const onFinalRef = useRef(onFinal)
+  const handlersRef = useRef(handlers)
+  const recognizerRef = useRef<Recognizer | null>(null)
+
   useEffect(() => {
-    onFinalRef.current = onFinal
-  }, [onFinal])
-  const [recognizer] = useState(
-    () =>
-      new Recognizer({
-        onStatus: setStatus,
-        onInterim: setInterim,
-        onFinal: (alternatives) => onFinalRef.current(alternatives),
-        onError: setError,
-      }),
-  )
-  useEffect(() => () => recognizer.abort(), [recognizer])
+    handlersRef.current = handlers
+  }, [handlers])
+
+  useEffect(() => {
+    const recognizer = new Recognizer({
+      onStatus: setStatus,
+      onInterim: setInterim,
+      onFinal: (alternatives) => handlersRef.current.onFinal(alternatives),
+      onError: (error) => handlersRef.current.onError?.(error),
+      onSilence: () => handlersRef.current.onSilence?.(),
+    })
+    recognizerRef.current = recognizer
+    return () => {
+      recognizer.abort()
+      recognizerRef.current = null
+    }
+  }, [])
+
   const start = useCallback(() => {
-    setError(null)
     setInterim('')
     stopSpeaking()
-    recognizer.start()
-  }, [recognizer])
-  const stop = useCallback(() => recognizer.stop(), [recognizer])
-  return { supported: recognizer.supported, status, interim, error, start, stop }
+    recognizerRef.current?.start()
+  }, [])
+  const stop = useCallback(() => recognizerRef.current?.stop(), [])
+
+  return { supported: getRecognitionCtor() !== null, status, interim, start, stop }
 }

@@ -87,6 +87,25 @@ describe('Recognizer', () => {
     expect(statuses).toEqual(['listening', 'idle'])
   })
 
+  it('reports silence when a session ends with no result and no error', () => {
+    let silences = 0
+    new Recognizer({ ...callbacks, onSilence: () => silences++ }, FakeRecognition).start()
+    FakeRecognition.instances[0].onend?.()
+    expect(silences).toBe(1)
+  })
+
+  it('does not report silence after a result or an error', () => {
+    let silences = 0
+    const r = new Recognizer({ ...callbacks, onSilence: () => silences++ }, FakeRecognition)
+    r.start()
+    FakeRecognition.instances[0].emit(['hello'], true)
+    FakeRecognition.instances[0].onend?.()
+    r.start()
+    FakeRecognition.instances[1].onerror?.({ error: 'no-speech' })
+    FakeRecognition.instances[1].onend?.()
+    expect(silences).toBe(0)
+  })
+
   it('maps browser errors and ignores aborts', () => {
     new Recognizer(callbacks, FakeRecognition).start()
     const rec = FakeRecognition.instances[0]

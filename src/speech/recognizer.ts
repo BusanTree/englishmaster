@@ -30,6 +30,8 @@ export interface RecognizerCallbacks {
   onInterim: (text: string) => void
   onFinal: (alternatives: string[]) => void
   onError: (error: RecognizerError) => void
+  /** The session ended without a result or an error, e.g. the mic was stopped before speaking. */
+  onSilence?: () => void
 }
 
 const ERRORS: Record<string, RecognizerError> = {
@@ -72,6 +74,7 @@ export class Recognizer {
     rec.maxAlternatives = 3
     rec.continuous = false
     let delivered = false
+    let failed = false
     rec.onresult = (event) => {
       let interim = ''
       for (let i = event.resultIndex; i < event.results.length; i++) {
@@ -90,12 +93,14 @@ export class Recognizer {
     }
     rec.onerror = (event) => {
       if (event.error === 'aborted') return
+      failed = true
       this.cb.onError(ERRORS[event.error] ?? 'other')
     }
     rec.onend = () => {
       if (this.rec !== rec) return
       this.rec = null
       this.cb.onStatus('idle')
+      if (!delivered && !failed) this.cb.onSilence?.()
     }
     this.rec = rec
     try {
