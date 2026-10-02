@@ -111,6 +111,9 @@ body {
   overscroll-behavior-y: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  /* Korean wraps between words, not inside them */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 button {
