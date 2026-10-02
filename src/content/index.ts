@@ -1,4 +1,4 @@
-import type { Course, CourseId, Lesson, Level, RawLesson, RawWord, Topic, Word } from './types.ts'
+import type { Course, CourseId, Lesson, Level, Pos, RawLesson, RawWord, Topic, Word } from './types.ts'
 import lessonsDaily from './lessons-daily.json'
 import lessonsFeelings from './lessons-feelings.json'
 import lessonsTravel from './lessons-travel.json'
@@ -27,6 +27,19 @@ export function wordsOfLevel(level: Level): Word[] {
 }
 
 export const LEVEL_NAMES: Record<Level, string> = { 1: '기초', 2: '일상', 3: '중급', 4: '고급' }
+
+export const POS_LABELS: Record<Pos, string> = {
+  noun: '명사',
+  verb: '동사',
+  adjective: '형용사',
+  adverb: '부사',
+  preposition: '전치사',
+  conjunction: '접속사',
+  pronoun: '대명사',
+  determiner: '한정사',
+  interjection: '감탄사',
+  phrase: '숙어',
+}
 
 export const LEVEL_DESCRIPTIONS: Record<Level, string> = {
   1: '간단한 문장을 읽고 말할 수 있어요',

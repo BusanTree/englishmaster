@@ -7,6 +7,11 @@ export function formatKoreanDate(day: string): string {
   return `${d.getMonth() + 1}월 ${d.getDate()}일 ${WEEKDAYS[d.getDay()]}`
 }
 
+export function formatMonthDay(day: string): string {
+  const d = parseDayKey(day)
+  return `${d.getMonth() + 1}월 ${d.getDate()}일`
+}
+
 export function greeting(hour: number): string {
   if (hour >= 5 && hour < 12) return '좋은 아침이에요'
   if (hour >= 12 && hour < 18) return '좋은 오후예요'

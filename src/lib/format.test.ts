@@ -1,7 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { formatKoreanDate, formatUsd, greeting, usdToKrw } from './format.ts'
+import { formatKoreanDate, formatMonthDay, formatUsd, greeting, usdToKrw } from './format.ts'
 
 describe('format', () => {
+  it('formats a short month-day', () => {
+    expect(formatMonthDay('2026-12-01')).toBe('12월 1일')
+  })
+
   it('formats a day key in Korean', () => {
     expect(formatKoreanDate('2026-10-02')).toBe('10월 2일 금요일')
   })
