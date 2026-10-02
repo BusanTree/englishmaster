@@ -1,6 +1,6 @@
 import { ChevronLeft } from 'lucide-react'
 import type { ReactNode } from 'react'
-import { useNavigate } from 'react-router'
+import { useGoBack } from './useGoBack.ts'
 
 /** Sticky header with a back button; falls back to `fallback` when there is no in-app history. */
 export function BackHeader({
@@ -14,13 +14,8 @@ export function BackHeader({
   onBack?: () => void
   right?: ReactNode
 }) {
-  const navigate = useNavigate()
-  const back = () => {
-    if (onBack) return onBack()
-    const idx = (window.history.state as { idx?: number } | null)?.idx ?? 0
-    if (idx > 0) navigate(-1)
-    else navigate(fallback, { replace: true })
-  }
+  const goBack = useGoBack(fallback)
+  const back = onBack ?? goBack
   return (
     <header className="sticky top-0 z-10 -mx-5 mb-2 flex h-14 items-center gap-1 bg-white/95 px-2 backdrop-blur">
       <button type="button" aria-label="뒤로" onClick={back} className="grid size-11 place-items-center rounded-full active:bg-surface">
