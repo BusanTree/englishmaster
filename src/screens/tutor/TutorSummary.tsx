@@ -66,6 +66,8 @@ export function TutorSummary() {
 
   if (!conversation) return <Navigate to="/tutor" replace />
   const turns = conversation.messages.filter((m) => m.role === 'user').length
+  // XP is earned only for turns the AI answered; the first AI message is the scripted opening.
+  const answered = Math.max(0, conversation.messages.filter((m) => m.role === 'ai').length - 1)
 
   if (!conversation.endedAt) {
     return (
@@ -125,7 +127,7 @@ export function TutorSummary() {
         </div>
         <div className="rounded-2xl bg-good-soft px-2 py-3">
           <dt className="text-xs font-bold text-good-deep">얻은 XP</dt>
-          <dd className="mt-1 font-en text-2xl font-extrabold text-good-deep">+{turns * XP.tutorTurn}</dd>
+          <dd className="mt-1 font-en text-2xl font-extrabold text-good-deep">+{answered * XP.tutorTurn}</dd>
         </div>
         <div className="rounded-2xl bg-surface px-2 py-3">
           <dt className="text-xs font-bold text-muted">비용</dt>
